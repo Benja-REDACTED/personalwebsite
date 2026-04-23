@@ -28,6 +28,20 @@
       padding: 20px;
       height:15vh;
     }
+    .info_container .square_image{
+      flex:0.3
+    }
+    .info_container p{
+      font-size: 2vmin;
+    }
+
+    .square_image{
+      height:inherit;
+      aspect-ratio: 1 / 1;
+      border-radius:75%;
+      border:8px solid #000000;
+      max-width: fit-content;
+    }
   </style>
 </head>
 <body>
@@ -64,9 +78,9 @@
   <h2>WATCH MY YOUTUBE</h2>
   <h4 style="position: relative; top: -1.5vh">Yes I'm shameless</h4>
 
-  <div class="info_container" style="position: absolute; width: 50%">
-    <img src="youtube%20channel%20assets/ytprofilepicture.jpg" alt="image" style="bottom:2%; width:15%;height:90%;;border-radius:75%;border:8px solid #000000; position: inherit">
-    <p style="width: 66%; left: 30%; position: inherit">It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
+  <div class="info_container" style="position: absolute; width: 50%; display: flex; flex-direction:row;">
+    <img src="youtube%20channel%20assets/ytprofilepicture.jpg" alt="image" class="square_image">
+    <p style="flex:1; padding: 10px">It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
   </div>
 </main>
 <script type="module" src="/main.js"></script>
