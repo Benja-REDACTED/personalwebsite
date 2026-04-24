@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <style>
       .banner {
-        object-fit: scale-down;
+        max-width: 100%;
+      }
+      .banner img{
+        object-fit: fill;
+        max-width: 100%;
+        height: auto;
       }
 
     .container {
@@ -27,12 +32,18 @@
       border: black solid 1px;
       padding: 20px;
       height:15vh;
+      position: absolute;
+      width: 50%;
+      display: flex;
+      flex-direction:row;
     }
     .info_container .square_image{
       flex:0.3
     }
     .info_container p{
       font-size: 2vmin;
+      flex:1;
+      padding: 10px
     }
 
     .square_image{
@@ -46,16 +57,20 @@
 </head>
 <body>
 <main id="app">
-  <img src="Mainlogo.gif" alt="worlds best logo" class="banner">
-  <div class="info_container">
+
+  <div class="banner">
+    <img src="Mainlogo.gif" alt="worlds best logo">
+  </div>
+
+
+  <div style="background-color:#d3d3d3; border: black solid 1px; padding: 20px; display:flex; flex-direction: column;">
     <h2>images :3</h2>
-    Submit your image(s):
+    <p style="flex:1">Submit your image(s):</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnv3Vt8gUxJRO54q2O-k_c_CyXr9y25NsdUkuj_mJJUgJx2Q/viewform?usp=header">Submit your own image</a>
     <br>
     Click to view images
     <details>
       <summary></summary>
-      <p>
         <div class="container">
           <img src="cursed%20images/townofhouse.jpg" alt="image" class="funny_image">
           <img src="cursed%20images/ceosvsgum.jpg" alt="image" class="funny_image">
@@ -67,7 +82,6 @@
           <img src="cursed%20images/evilcorndogcat.png" alt="image" class="funny_image">
           <img src="cursed%20images/gay%20sky.jpg" alt="image" class="funny_image">
         </div>
-      </p>
     </details>
   </div>
 
@@ -78,9 +92,9 @@
   <h2>WATCH MY YOUTUBE</h2>
   <h4 style="position: relative; top: -1.5vh">Yes I'm shameless</h4>
 
-  <div class="info_container" style="position: absolute; width: 50%; display: flex; flex-direction:row;">
+  <div class="info_container">
     <img src="youtube%20channel%20assets/ytprofilepicture.jpg" alt="image" class="square_image">
-    <p style="flex:1; padding: 10px">It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
+    <p>It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
   </div>
 </main>
 <script type="module" src="/main.js"></script>
