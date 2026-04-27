@@ -2,17 +2,31 @@ let fishReaction = "blub"
 let animationTimer = 0
 possibleReactions = {
     "screw you": 5,
-    "bluble":20,
-    "blub":60,
-    "google degloving injury":1,
-    "fish":10,
+    "bluble":80,
+    "blub":90,
+    "fish":60,
     "taxes or something idk im a fish":5,
     "feed me when the lazy dev adds it":5,
-    "blubbleubelel":20,
-    "bubble":100,
+    "blubbleubelel":60,
+    "bubble":120,
     "you should talk to youmtah hes cool also hes codename jelly":10,
     "you need to use agent jelly":10,
-    "agent jelly is the jellyish emoji":15
+    "agent jelly is the jellyish emoji":15,
+    "67? im so sorry that was dumb.": 5,
+    "fih":80,
+    "fish? yeah fish":10,
+    "what does the fox say? not this that's for sure":5,
+    "there is a fish called a glass tetra that's transparent! bro really meant let me be clear": 20,
+    "there is an underwater snail with an IRON shell tht lives at the bottom of the sea in water that is up to 400 america degrees": 20,
+    "blue whales arent blue D: Wait yes they are :D": 20,
+    "water is in the ocean :O": 20,
+    "manta rays can grow up to 23 feet long! but my cousin is one and he's nice :)":20,
+    "parrot fish make good pets because they are social":20,
+    "ZAYNE MICHAEL STONE FROM OWENSBORO KENTUCKY PEED IN THE OCEAN ONCE!!! ....i can still taste it :(.....":20,
+    "leopard sharks are very protective of their pups! chris hansen is actually a leopard shark!":1,
+    "leopard sharks are very protective of their pups!":20,
+    "there are only 20 vaquitas left in the world":20,
+    "ELLA NEAL FROM OWENSBORO KENTUCKY LOVES MONEY":1
     }
     weightedPossibleReactions = []
     for (i in possibleReactions) {
@@ -35,8 +49,7 @@ function draw(){
     fish.src = "./fihstuff/fih.png"
 
     ctx.drawImage(tankBackground, 0, 0, canvas.width, canvas.height)
-    ctx.drawImage(fish, Math.sin(animationTimer/200)*canvas.width*0.6+0.32*canvas.width, Math.sin(animationTimer/800)*canvas.width*0.3, 0.32*canvas.width, 0.25*canvas.height);
-    console.log(canvas.width + Math.sin(animationTimer))
+    ctx.drawImage(fish, 0.34*canvas.width, Math.sin(animationTimer/200)*canvas.height*0.3+0.375*canvas.height, 0.32*canvas.width, 0.25*canvas.height);
 
     animationTimer += 1
     }
