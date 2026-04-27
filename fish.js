@@ -1,4 +1,5 @@
 let fishReaction = "blub"
+let animationTimer = 0
 possibleReactions = {
     "screw you": 5,
     "bluble":20,
@@ -29,10 +30,16 @@ function draw(){
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     let fish = new Image()
-    fish.src = "/cursedimages/townofhouse.jpg"
+    let tankBackground = new Image()
+    tankBackground.src= "./fihstuff/fishtank.jpg"
+    fish.src = "./fihstuff/fih.png"
 
-    ctx.drawImage(fish, 0, 0, canvas.width, canvas.height);
-}
+    ctx.drawImage(tankBackground, 0, 0, canvas.width, canvas.height)
+    ctx.drawImage(fish, Math.sin(animationTimer/200)*canvas.width*0.6+0.32*canvas.width, Math.sin(animationTimer/800)*canvas.width*0.3, 0.32*canvas.width, 0.25*canvas.height);
+    console.log(canvas.width + Math.sin(animationTimer))
+
+    animationTimer += 1
+    }
 setInterval(draw, 16.6);
 
 function button() {
