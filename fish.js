@@ -24,20 +24,19 @@ possibleReactions = {
     console.log(weightedPossibleReactions)
 
 
-
 function draw(){
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
+    ctx.imageSmoothingEnabled = true;
     let fish = new Image()
     let tankBackground = new Image()
     tankBackground.src= "./fihstuff/fishtank.jpg"
     fish.src = "./fihstuff/fih.png"
 
     ctx.drawImage(tankBackground, 0, 0, canvas.width, canvas.height)
-    ctx.drawImage(fish, 0.5*canvas.width - 0.16*canvas.width, Math.sin(animationTimer/200)*canvas.height*0.25+0.32*canvas.height, 0.32*canvas.width, 0.25*canvas.height);
-    console.log(Math.sin(animationTimer/200)*canvas.width*0.6)
+    ctx.drawImage(fish, 0.5*canvas.width - 0.216*canvas.width, Math.sin(animationTimer/200)*canvas.height*0.34+0.43*canvas.height, 0.43*canvas.width, 0.34*canvas.height);
 
-    animationTimer += 3
+    animationTimer += 1
     }
 setInterval(draw, 16.6);
 
