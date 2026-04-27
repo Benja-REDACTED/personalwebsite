@@ -29,7 +29,7 @@ function draw(){
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     let fish = new Image()
-    fish.src = "cursed%20images/townofhouse.jpg"
+    fish.src = "/cursedimages/townofhouse.jpg"
 
     ctx.drawImage(fish, 0, 0, canvas.width, canvas.height);
 }

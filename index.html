@@ -57,7 +57,48 @@
     }
   </style>
 </head>
-<script src="/fish.js"></script>
+<script>let fishReaction = "blub"
+possibleReactions = {
+  "screw you": 5,
+  "bluble":20,
+  "blub":60,
+  "google degloving injury":1,
+  "fish":10,
+  "taxes or something idk im a fish":5,
+  "feed me when the lazy dev adds it":5,
+  "blubbleubelel":20,
+  "bubble":100,
+  "you should talk to youmtah hes cool also hes codename jelly":10,
+  "you need to use agent jelly":10,
+  "agent jelly is the jellyish emoji":15
+}
+weightedPossibleReactions = []
+for (i in possibleReactions) {
+  counter = 0
+  while (counter < possibleReactions[i]){
+    weightedPossibleReactions.push(i)
+    counter += 1
+  }
+}
+console.log(weightedPossibleReactions)
+
+
+
+function draw(){
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  let fish = new Image()
+  fish.src = "/cursedimages/townofhouse.jpg"
+
+  ctx.drawImage(fish, 0, 0, canvas.width, canvas.height);
+}
+setInterval(draw, 16.6);
+
+function button() {
+  const fishTranslator = document.getElementById("live fish reaction");
+
+  fishTranslator.textContent =  "live fish reaction: " + weightedPossibleReactions[Math.floor(Math.random() * weightedPossibleReactions.length)]
+}</script>
 <body>
 <main id="app">
 
@@ -75,15 +116,15 @@
     <details>
       <summary></summary>
         <div class="container">
-          <img src="cursed%20images/townofhouse.jpg" alt="image" class="funny_image">
-          <img src="cursed%20images/ceosvsgum.jpg" alt="image" class="funny_image">
-          <img src="cursed%20images/immortalscammerDX.jpg" alt="image" class="funny_image">
-          <img src="cursed%20images/mixed.jpg" alt="image" class="funny_image">
-          <img src="cursed%20images/ungrateforyourliver.jpg" alt="image" class="funny_image">
-          <img src="cursed%20images/kriswherethefuckarewehowareweinultrakill.jpeg" alt="image" class="funny_image">
-          <img src="cursed%20images/invinciraffe.png" alt="image" class="funny_image">
-          <img src="cursed%20images/evilcorndogcat.png" alt="image" class="funny_image">
-          <img src="cursed%20images/gay%20sky.jpg" alt="image" class="funny_image">
+          <img src="cursedimages/townofhouse.jpg" alt="image" class="funny_image">
+          <img src="cursedimages/ceosvsgum.jpg" alt="image" class="funny_image">
+          <img src="cursedimages/immortalscammerDX.jpg" alt="image" class="funny_image">
+          <img src="cursedimages/mixed.jpg" alt="image" class="funny_image">
+          <img src="cursedimages/ungrateforyourliver.jpg" alt="image" class="funny_image">
+          <img src="cursedimages/kriswherethefuckarewehowareweinultrakill.jpeg" alt="image" class="funny_image">
+          <img src="cursedimages/invinciraffe.png" alt="image" class="funny_image">
+          <img src="cursedimages/evilcorndogcat.png" alt="image" class="funny_image">
+          <img src="cursedimages/gay%20sky.jpg" alt="image" class="funny_image">
         </div>
     </details>
   </div>
@@ -97,7 +138,7 @@
 
   <div style="display:flex;">
     <div class="info_container">
-      <img src="youtube%20channel%20assets/ytprofilepicture.jpg" alt="image" class="square_image">
+      <img src="youtubechannelassets/ytprofilepicture.jpg" alt="image" class="square_image">
       <p>It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
     </div>
 
