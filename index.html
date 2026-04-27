@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <title>the best website</title>
   <meta charset="UTF-8" />
   <style>
       .banner {
@@ -30,11 +31,11 @@
     .info_container {
       background-color: #d3d3d3;
       border: black solid 1px;
-      padding: 20px;
+      padding: 5px;
       height:15vh;
       position: absolute;
-      width: fit-content;
-      min-width: 50%;
+      min-height:fit-content;
+      width: 50%;
       display: flex;
       flex-direction:row;
     }
@@ -56,6 +57,7 @@
     }
   </style>
 </head>
+<script src="/fish.js"></script>
 <body>
 <main id="app">
 
@@ -93,11 +95,23 @@
   <h1>WATCH MY YOUTUBE</h1>
   <h3 style="position: relative; top: -1.5vh">Yes I'm shameless</h3>
 
-  <div class="info_container">
-    <img src="youtube%20channel%20assets/ytprofilepicture.jpg" alt="image" class="square_image">
-    <p>It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
+  <div style="display:flex;">
+    <div class="info_container">
+      <img src="youtube%20channel%20assets/ytprofilepicture.jpg" alt="image" class="square_image">
+      <p>It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
+    </div>
+
+    <div style="border: black 3px; width:50%; height:calc(15vh + 20px); flex:1;"></div>
+  </div>
+
+    <div style="height:15vh;"></div>
+
+  <div style="display:flex; flex-direction: column; height:45vh; margin-bottom: 40px">
+    <canvas id="canvas" style="border: black 3px; width:70%; height:30vh; margin: auto;"></canvas>
+
+    <h2 style="background: #d3d3d3; margin: 10px; padding: 10px; flex: 0.3" id="live fish reaction">Live fish reaction:</h2>
+    <button type="button" onclick="button()" style="flex:1">Fih</button>
   </div>
 </main>
-<script type="module" src="/main.js"></script>
 </body>
 </html>
