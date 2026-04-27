@@ -4,7 +4,7 @@ possibleReactions = {
     "screw you": 5,
     "bluble":20,
     "blub":60,
-    "google degloving injury":1,
+    //"google degloving injury":1,
     "fish":10,
     "taxes or something idk im a fish":5,
     "feed me when the lazy dev adds it":5,
@@ -35,10 +35,10 @@ function draw(){
     fish.src = "./fihstuff/fih.png"
 
     ctx.drawImage(tankBackground, 0, 0, canvas.width, canvas.height)
-    ctx.drawImage(fish, Math.sin(animationTimer/200)*canvas.width*0.6+0.32*canvas.width, Math.sin(animationTimer/800)*canvas.width*0.3, 0.32*canvas.width, 0.25*canvas.height);
-    console.log(canvas.width + Math.sin(animationTimer))
+    ctx.drawImage(fish, Math.sin(animationTimer/200)*canvas.width*0.6+0.32*canvas.width, 50, 0.32*canvas.width, 0.25*canvas.height);
+    console.log(Math.sin(animationTimer/200)*canvas.width*0.6)
 
-    animationTimer += 1
+    animationTimer += 3
     }
 setInterval(draw, 16.6);
 
