@@ -26,7 +26,8 @@ possibleReactions = {
     "leopard sharks are very protective of their pups! chris hansen is actually a leopard shark!":1,
     "leopard sharks are very protective of their pups!":20,
     "there are only 20 vaquitas left in the world":20,
-    "ELLA NEAL FROM OWENSBORO KENTUCKY LOVES MONEY":1
+    "ELLA NEAL FROM OWENSBORO KENTUCKY LOVES MONEY":1,
+    "oceans arenmt desrt":5
     }
     weightedPossibleReactions = []
     for (i in possibleReactions) {
