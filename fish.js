@@ -1,5 +1,6 @@
-let fishReaction = "blub"
 let animationTimer = 0
+let bubbles = []
+let canvas = null
 possibleReactions = {
     "screw you": 5,
     "bluble":80,
@@ -31,7 +32,7 @@ possibleReactions = {
     }
     weightedPossibleReactions = []
     for (i in possibleReactions) {
-        counter = 0
+        let counter = 0
         while (counter < possibleReactions[i]){
             weightedPossibleReactions.push(i)
             counter += 1
@@ -42,16 +43,28 @@ possibleReactions = {
 
 
 function draw(){
-    const canvas = document.getElementById("canvas");
+    canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
+
     let fish = new Image()
     let tankBackground = new Image()
+    let bubble = new Image()
+
     tankBackground.src= "./fihstuff/fishtank.jpg"
     fish.src = "./fihstuff/fih.png"
+    bubble.src = "./fihstuff/bubble.png"
+
 
     ctx.drawImage(tankBackground, 0, 0, canvas.width, canvas.height)
     ctx.drawImage(fish, 0.34*canvas.width, Math.sin(animationTimer/200)*canvas.height*0.3+0.375*canvas.height, 0.32*canvas.width, 0.25*canvas.height);
 
+    counter = 0
+    while (counter < bubbles.length){
+        bubbles[counter][1] -= bubbles[counter][2]
+        ctx.drawImage(bubble, bubbles[counter][0], bubbles[counter][1], 20, 20)
+
+        counter += 1
+    }
     animationTimer += 1
     }
 setInterval(draw, 16.6);
@@ -60,4 +73,5 @@ function button() {
     const fishTranslator = document.getElementById("live fish reaction");
 
     fishTranslator.textContent =  "live fish reaction: " + weightedPossibleReactions[Math.floor(Math.random() * weightedPossibleReactions.length)]
+    bubbles.push([Math.random()*10+0.37*canvas.width, Math.sin(animationTimer/200)*canvas.height*0.3+0.375*canvas.height, Math.random()+0.25])
 }
