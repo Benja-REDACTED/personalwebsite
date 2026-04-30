@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/fractions@1.0.2/Fraction.min.js"></script>
 <head>
   <title>the best website</title>
   <meta charset="UTF-8" />
@@ -57,7 +58,6 @@
     }
   </style>
 </head>
-<script src="./fish.js"></script>
 <body>
 <main id="app">
 
@@ -95,7 +95,7 @@
 
   <div style="display:flex;">
     <div class="info_container">
-      <a src="https://www.youtube.com/channel/UCmDE1AdDhfOPfTKRwuRc0ZQ" style="height: inherit; margin: 10px">
+      <a href="https://www.youtube.com/channel/UCmDE1AdDhfOPfTKRwuRc0ZQ" style="height: inherit; margin: 10px">
         <img src="youtubechannelassets/ytprofilepicture.jpg" alt="image" class="square_image">
       </a>
       <p>It's called gamingorsmthn (click the image it's actually a link in disguise) It's mostly discussion of games, and playthroughs. Specifically a lot of minecraft, beatblock, and eventually celeste, ultrakill and geometry dash</p>
@@ -106,12 +106,16 @@
 
     <div style="height:15vh;"></div>
 
-  <div style="display:flex; flex-direction: column; height:45vh; margin-bottom: 40px; border: black 5px solid;">
+  <div style="display:flex; flex-direction: column; height:40vh; margin-bottom: 40px; border: black 5px solid;">
     <canvas id="canvas" style="border: black 3px; width:100%; height:30vh; margin: auto;"></canvas>
 
     <h2 style="background: #d3d3d3; margin: 10px; padding: 10px; flex: 0.3" id="live fish reaction">live fish reaction:</h2>
-    <button type="button" onclick="button()" style="flex:1">Poke fish (makes it talk)</button>
+    <button type="button" onclick="button()" style="flex:0.8">Poke fish (makes it talk)</button>
   </div>
+  <h1>Submit dialogue</h1>
+  <h2>PLEASE I NEED IT SO BAD</h2>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOcYttBuFPxnPbymOhRmHCLoN_r7yHLLXOufVCvAflj8cS7Q/viewform?embedded=true" style="margin-top:50px; width:100%; margin-bottom: 150px; height: 20vh">Loading…</iframe>
 </main>
 </body>
+<script src="./fish.js"></script>
 </html>
